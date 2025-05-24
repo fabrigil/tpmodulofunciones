@@ -16,6 +16,9 @@ if __name__ == "__main__":
         while genero != 1 and genero != 0:
             genero = int(input("Género no válido, ingrese su género: 1 si es masculino, 0 si es femenino: "))
         valor_tmb = calcular_calorias_en_reposo(peso, altura, edad, genero)
+        resultado = valor_tmb
+        with open("resultado_temp.txt", "w", encoding='utf-8-sig') as archivo:
+            archivo.write(str(resultado))
     except ValueError:
         print("Error: Ingrese un número válido para peso y/o altura y/o edad")
     except Exception as e:

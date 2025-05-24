@@ -12,6 +12,9 @@ if __name__ == "__main__":
         while altura.is_integer():
             altura = float(input("Altura ingresada en centímetros, por favor ingrese su altura en metros: "))
         valor_IMC = calcular_IMC(peso, altura)
+        resultado = valor_IMC
+        with open("resultado_temp.txt", "w", encoding='utf-8-sig') as archivo:
+            archivo.write(str(resultado))
     except ValueError:
         print("Error: Ingrese un número válido para peso y/o altura")
     except Exception as e:

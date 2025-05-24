@@ -19,6 +19,9 @@ if __name__ == "__main__":
         while valor_actividad != 1 and valor_actividad != 2 and valor_actividad != 3 and valor_actividad != 4 and valor_actividad != 5:
             valor_actividad = int(input("Nivel de actividad física a la semana no válido, ingrese según su nivel de actividad física a la semana: 1 poco o ningún ejercicio, 2 ejercicio ligero (1 a 3 días a la semana), 3 ejercicio moderado (3 a 5 días a la semana), 4 deportista (6 a 7 días a la semana) y 5 atleta (entrenamientos mañana y tarde): "))
         valor_tmb_actividad = calcular_calorias_en_actividad(peso, altura, edad, genero, valor_actividad)
+        resultado = valor_tmb_actividad
+        with open("resultado_temp.txt", "w", encoding='utf-8-sig') as archivo:
+            archivo.write(str(resultado))
     except ValueError:
         print("Error: Ingrese un número válido para peso y/o altura y/o edad")
     except Exception as e:
