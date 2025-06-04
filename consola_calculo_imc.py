@@ -4,12 +4,12 @@ from calculadora_indices import calcular_IMC
 if __name__ == "__main__":
     try:
         peso = float(input("Ingrese su peso en kg: "))
-        while peso <= 0:
+        if peso <= 0:
             peso = float(input("Peso ingresado no válido, por favor ingrese su peso válido en kg: "))
         altura = float(input("Ingrese su altura en metros: "))
-        while altura <= 0:
+        if altura <= 0:
             altura = float(input("Altura ingresada no válida, por favor ingrese su altura válida en metros: "))
-        while altura.is_integer():
+        if altura.is_integer():
             altura = float(input("Altura ingresada en centímetros, por favor ingrese su altura en metros: "))
         valor_IMC = calcular_IMC(peso, altura)
         resultado = valor_IMC
