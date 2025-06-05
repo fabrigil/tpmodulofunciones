@@ -1,4 +1,3 @@
-
 import calculadora_indices as calc
 from calculadora_indices import calcular_calorias_en_actividad
 
