@@ -1,3 +1,4 @@
+
 def calcular_IMC(peso, altura):
     valor_IMC = peso / (altura ** 2)
     redondeo_valor_IMC = round(valor_IMC, 2)
